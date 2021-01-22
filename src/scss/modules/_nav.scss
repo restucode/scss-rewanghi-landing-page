@@ -1,0 +1,103 @@
+@use './mixin' as m;
+//fonts
+$raleway : 'Raleway', sans-serif;
+$lora : 'Lora', sans-serif;
+
+// color
+$bg-color: #FFFFFF;
+$secodary: #5AACA8;
+$third: #FF7468;
+$bg-section: #F8FCFA;
+	
+
+
+.nav {
+	padding: 30px 20px;
+	position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: transparent;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+	#{&}-area {
+		@include m.flex-box(space-between, center);
+		margin: 0 auto;
+		max-width: 1440px;
+	}
+
+	#{&}-burger {
+		width: 30px;
+		transform: translateY(-3px);
+	}
+
+	#{&}-menu {
+		display: none;
+	}
+
+	#{&}-button-desktop {
+		display: none;
+	}
+
+
+
+	@media (min-width: 968px) {
+
+		padding: 30px 30px;
+		#{&}-burger {
+			display: none;
+		}
+
+		#{&}-menu {
+			@include m.flex-box(center, center, row);
+
+			a {
+				margin: 0 15px;
+				color: #37415C;
+				&:nth-child(5),
+				&:nth-child(6) {
+					display: none;
+				}
+
+			}
+		}
+
+		#{&}-button-desktop {
+			@include m.flex-box(center, center, row);
+
+			a {
+				margin: 0 20px;
+				color: white;
+			}
+		}
+	}
+
+	@media (min-width: 1200px) {
+		padding: 30px 60px;
+
+		#{&}-menu {
+			a {
+				margin: 0 30px;
+			}
+		}
+
+		#{&}-button-desktop {
+			a {
+				margin: 0 30px;
+			}
+		}
+	}
+}
+
+.nav.active {
+	background-color: $bg-color;
+
+	@media (min-width: 968px) {
+		.bd-active {
+			color: black;
+		}
+	}
+}
+

@@ -1,0 +1,27 @@
+@mixin flex-box($jc: flex-start, $ai: flex-start, $fd: row, $fw: inherit) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+@mixin grid($value: 12, $gap: 0px) {
+	display: grid;
+	grid-template-columns: repeat($value, 1fr);
+	gap: $gap;
+
+}
+
+
+@mixin btn-donate-now() {
+	width: 200px;
+	border-radius: 12px;
+	color: white;
+	height: 68px;
+	background-color: #FF7468;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	text-shadow: 0 4px 4px rgba(0,0,0,.25);
+}

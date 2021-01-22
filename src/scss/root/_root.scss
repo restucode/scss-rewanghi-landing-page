@@ -1,0 +1,38 @@
+// fonts
+$raleway : 'Raleway', sans-serif;
+$lora : 'Lora', sans-serif;
+
+
+// color
+$bg-color: #FFFFFF;
+$secodary: #5AACA8;
+$third: #FF7468;
+$bg-section: #F8FCFA;
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  quotes: none;
+  text-decoration: unset;
+  outline: none;
+  border: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+html {
+ scroll-behavior: smooth;
+ width: 100%;
+ height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+  font-family: $raleway;
+}
