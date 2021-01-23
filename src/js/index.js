@@ -2,8 +2,9 @@ import '../scss/main.scss'
 
 
 const nav = document.querySelector('.nav')
-const burger = document.querySelector('.nav-burger')
 const menu = document.querySelector('.nav-menu')
+const burger = document.querySelector('.nav-burger')
+const closeMenu = document.querySelector('.nav-menu-close')
 
 window.addEventListener('scroll', function() {
  nav.classList.toggle('active', window.scrollY > 0)
@@ -21,6 +22,11 @@ window.addEventListener('scroll', function() {
 })
 
 burger.addEventListener('click', function() {
- menu.classList.toggle('active')
- document.body.classList.toggle('active')
+ menu.classList.add('active')
+ document.body.classList.add('active')
+})
+
+closeMenu.addEventListener('click', function() {
+  menu.classList.remove('active')
+  document.body.classList.remove('active')
 })

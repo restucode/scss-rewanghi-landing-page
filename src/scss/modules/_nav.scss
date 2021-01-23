@@ -12,8 +12,8 @@ $bg-section: #F8FCFA;
 
 
 .nav {
-	padding: 30px 20px;
-	position: fixed;
+  padding: 30px 20px;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -31,13 +31,12 @@ $bg-section: #F8FCFA;
 	#{&}-burger {
 		width: 30px;
 		transform: translateY(-3px);
-		z-index: 100;
 		cursor: pointer;
 	}
 
 
 	#{&}-menu {
-		@include m.flex-box(space-evenly,center,column);
+	   @include m.flex-box(center,center);
 		position: fixed;
 		z-index: 99;
 		top: -100%;
@@ -49,14 +48,33 @@ $bg-section: #F8FCFA;
 		background-color: white;
 		visibility: hidden;
 		transition: .3s;
-		a {
-		 color: black;
-		 &:nth-child(6) {
-		 	border: 1px solid #37415C;
-		 	padding: 15px 30px;
-		 	border-radius: 12px;
-		 }
+		.nav-menu-area {
+		  @include m.flex-box(space-evenly,center,column);
+		  width: 300px;
+		  height: 100vh;
+		  position: relative;
+		  box-shadow: 0 5px 5px rgba(0,0,0,.1);
+			a {
+			 color: black;
+			 &:nth-child(6) {
+			 	border: 1px solid #37415C;
+			 	padding: 15px 30px;
+			 	border-radius: 12px;
+			 }
+		    }
+		    .nav-menu-close {
+		    	position: absolute;
+		    	width: 30px;
+		    	top: 33px;
+		    	right: 10px;
+		    	cursor: pointer;
+		    }
+
+		  @media (min-width: 400px) {
+		  	width: 400px;
+		  }
 		}
+
 	}
 
 	#{&}-menu.active {
@@ -68,10 +86,7 @@ $bg-section: #F8FCFA;
 		display: none;
 	}
 
-
-
 	@media (min-width: 968px) {
-
 		padding: 30px 30px;
 		#{&}-burger {
 			display: none;
@@ -89,9 +104,14 @@ $bg-section: #F8FCFA;
 			height: inherit;
 			visibility: inherit;
 			background-color: inherit;
-
-			a {
-				margin: 0 15px;
+			.nav-menu-area {
+			 @include m.flex-box(center, center, row);
+			  width: inherit;
+			  height: inherit;
+			  position: inherit;
+			  box-shadow: inherit;
+			  a {
+				margin: 0 25px;
 				cursor: pointer;
 				color: #37415C;
 				&:nth-child(5),
@@ -99,6 +119,10 @@ $bg-section: #F8FCFA;
 					display: none;
 				}
 
+			  }
+			    .nav-menu-close {
+			    	display: none;
+			    }
 			}
 		}
 
@@ -106,13 +130,13 @@ $bg-section: #F8FCFA;
 			@include m.flex-box(center, center, row);
 
 			a {
-				margin: 0 20px;
+				margin: 0 15px;
 				color: white;
 				cursor: pointer;
 			}
 
 			.bd-sign-up {
-				padding: 15px 30px;
+				padding: 15px 25px;
 				border: 1px solid white;
 				border-radius: 12px;
 			}
@@ -131,7 +155,11 @@ $bg-section: #F8FCFA;
 
 		#{&}-button-desktop {
 			a {
-				margin: 0 30px;
+				margin: 0 10px;
+			}
+
+			.bd-sign-up {
+				margin-left: 15px;
 			}
 		}
 	}

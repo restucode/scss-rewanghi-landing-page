@@ -1,10 +1,145 @@
+@use 'mixin' as m;
+
 //fonts
 $raleway : 'Raleway', sans-serif;
 $lora : 'Lora', sans-serif;
 
 // color
 $bg-color: #FFFFFF;
-$secodary: #5AACA8;
+$secondary: #5AACA8;
 $third: #FF7468;
 $bg-section: #F8FCFA;
-	
+
+.features {
+	padding: 50px 20px 30px;
+	max-width: 1440px;
+	margin: 0 auto;
+	#{&}-area {
+	 @include m.grid(12, 20px);
+	 place-items: center;
+	}
+
+	#{&}-left {
+		grid-column: span 12;
+		span {
+			text-transform: uppercase;
+			font-size: .95rem;
+			font-weight: 600;
+			color : grey;
+		  @media (min-width: 768px) {
+		  	font-size: 1.05rem;
+		  }		  
+		  @media (min-width: 968px) {
+		  	font-size: 1.1rem;
+		  	padding-left: 30px;
+		  }
+		  @media (min-width: 1200px) {
+		  	font-size: 1.1rem;
+		  	padding-left: 60px;
+		  }
+		}
+
+		h2 {
+		  padding-top: 10px;
+		  font-size: 1.8rem;
+		  font-family: $lora;
+		  strong {
+		  	color : $secondary;
+		  }
+
+		  @media (min-width: 768px) {
+		  	font-size: 2.0rem;
+		  
+		  }		  
+		  @media (min-width: 968px) {
+		  	font-size: 2.2rem;
+		  	padding-left: 30px;
+		  }
+		  @media (min-width: 1200px) {
+		  	padding-left: 60px;
+		  }
+		}
+
+		p {
+			padding: 25px 0 20px;
+			line-height: 30px;
+		  @media (min-width: 968px) {
+		  	padding-left: 30px;
+		  }
+
+		  @media (min-width: 1200px) {
+		  	padding-left: 60px;
+		  }
+		}
+
+		a {
+			@include m.btn-donate-now();
+			font-weight: bold;
+			margin: 30px 0 20px;
+		  @media (min-width: 968px) {
+		  	margin-left: 30px;
+		  }
+
+		  @media (min-width: 1200px) {
+		  	margin-left: 60px;
+		  }
+		}
+
+	@media (min-width: 768px) {
+		grid-column: span 6;
+	 }
+	}
+
+	#{&}-right {
+		grid-column: span 12;
+		margin-top: 15px;
+	@media (min-width: 768px) {
+		grid-column: span 6;
+	 }
+	}
+
+	#{&}-menu {
+	  @include m.grid(12, 20px);
+	  place-items: center;
+	}
+
+	#{&}-card {
+	  grid-column: span 12;
+	  @include m.flex-box(center,center,column);
+	  text-align: center;
+	  width: 100%;
+	  border-radius: 5px;
+	  transition: .3s;
+	  padding: 20px;
+	  margin: 15px 0;
+
+	  h4 {
+	  	padding: 30px 0 10px;
+	  }
+	  p {
+	  	// width: 200px;
+	  	padding: 10px 0;
+	  }
+
+	 @media (min-width: 500px) {
+	 	grid-column: span 6;
+	 }
+
+	 @media (min-width: 768px) {
+	 	grid-column: span 6;
+	 }
+
+	 @media (min-width: 968px) {
+	 	width: 220px;
+	 	height: 230px;
+	 }
+
+	 @media (min-width: 1200px) {
+	 	width: 250px;
+	 }
+
+	 &:hover {
+	   box-shadow: -40px 80px 70px rgba(96,96,96, .05);
+	 }
+	}
+}

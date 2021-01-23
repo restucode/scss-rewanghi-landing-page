@@ -1,10 +1,127 @@
+@use 'mixin' as m;
+
 //fonts
 $raleway : 'Raleway', sans-serif;
 $lora : 'Lora', sans-serif;
 
 // color
 $bg-color: #FFFFFF;
-$secodary: #5AACA8;
+$secondary: #5AACA8;
 $third: #FF7468;
 $bg-section: #F8FCFA;
-	
+$text-grey: #F8FCFA;
+
+
+.about-us {
+	background-color: $bg-color;
+	padding: 80px 20px 30px;
+	margin: 0 auto;
+	max-width: 1440px;
+	#{&}-area {
+	  @include m.grid(12, 20px);
+	  justify-items: center;
+	  align-items: center;
+	}
+
+	#{&}-header {
+		grid-column: span 12;
+		text-align: center;
+
+		span {
+			text-transform: uppercase;
+			font-size: .95rem;
+			font-weight: 600;
+			color : grey;
+		  @media (min-width: 768px) {
+		  	font-size: 1.05rem;
+		  }		  
+		  @media (min-width: 968px) {
+		  	font-size: 1.1rem;
+		  }
+		}
+
+		h2 {
+		  padding-top: 10px;
+		  font-size: 1.8rem;
+		  font-family: $lora;
+		  strong {
+		  	color : $secondary;
+		  }
+
+		  @media (min-width: 768px) {
+		  	font-size: 2.0rem;
+		  }		  
+		  @media (min-width: 968px) {
+		  	font-size: 2.2rem;
+		  }
+		}
+	}
+
+	#{&}-body {
+		grid-column: span 12;
+		@include m.flex-box(center,center);
+		img {
+			width: 100%;
+		}
+	}
+
+	#{&}-footer {
+		grid-column: span 12;
+		background-color: $bg-section;
+		width: 100%;
+		padding: 0 20px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-direction: column;
+
+		@media (min-width: 500px) {
+			justify-content: space-between;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		@media (min-width: 968px) {
+			padding: 0;
+		}
+	}
+
+	#{&}-footer-data {
+		margin: 10px 0;
+		h4 {
+			font-size: 1.5rem;
+			padding-bottom: 10px;
+
+			@media (min-width: 400px) {
+				font-size: 1.8rem;
+			}
+			@media (min-width: 968px) {
+				font-size: 2.2rem;
+			}
+		}
+		span {
+			font-size: .92rem;
+
+			@media (min-width: 968px) {
+				font-size: 1rem;
+			}
+		}
+
+		@media (min-width: 500px) {
+			width: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+
+		@media (min-width: 968px) {
+			width: 25%;
+		}
+	}
+
+	@media (min-width: 968px) {
+		padding: 80px 0 30px;
+	}
+}
+
