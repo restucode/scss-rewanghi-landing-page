@@ -1,3 +1,5 @@
+@use 'mixin' as m;
+
 //fonts
 $raleway : 'Raleway', sans-serif;
 $lora : 'Lora', sans-serif;
@@ -7,4 +9,55 @@ $bg-color: #FFFFFF;
 $secodary: #5AACA8;
 $third: #FF7468;
 $bg-section: #F8FCFA;
-	
+
+
+.support {
+ padding: 10px 20px;
+ position: relative;
+ background-color: $bg-section;
+   margin: 0 auto;
+   max-width: 1440px;
+ #{&}-area {
+   @include m.flex-box(center,center,column,wrap);
+ }
+
+ #{&}-img {
+ 	margin: 30px 0;
+ 	&:nth-child(3) {
+   	  div {
+	 	 width: 220px;
+	 	 background-color: white;
+	 	 height: 80px;
+	 	 box-shadow: 0 30px 50px rgba(136,136,136,.1);
+	 	 @include m.flex-box(center,center);
+	  }
+   	}
+ }
+
+ @media (min-width: 500px) {
+	#{&}-area {
+	  @include m.flex-box(space-around,center,row,wrap);
+
+	}
+
+	#{&}-img {
+	 &:nth-child(3) {
+	 	width: 100%;
+	 	justify-self: center;
+  		@include m.flex-box(center,center);
+		@media (min-width: 968px) {
+			width: inherit;
+			justify-self: inherit; 
+		}
+	  }
+
+	  @media (min-width: 968px) {
+	  	img {
+	  		width: 130px;
+	  		object-fit: cover;
+	  	}
+	  }
+	}
+  }
+}
+

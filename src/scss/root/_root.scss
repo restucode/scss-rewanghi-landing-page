@@ -35,4 +35,9 @@ body {
 	position: relative;
 	margin: 0 auto;
   font-family: $raleway;
+  overflow: auto;
+}
+
+body.active {
+  overflow: hidden;
 }

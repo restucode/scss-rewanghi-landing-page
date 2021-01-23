@@ -31,10 +31,37 @@ $bg-section: #F8FCFA;
 	#{&}-burger {
 		width: 30px;
 		transform: translateY(-3px);
+		z-index: 100;
+		cursor: pointer;
 	}
 
+
 	#{&}-menu {
-		display: none;
+		@include m.flex-box(space-evenly,center,column);
+		position: fixed;
+		z-index: 99;
+		top: -100%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: white;
+		visibility: hidden;
+		transition: .3s;
+		a {
+		 color: black;
+		 &:nth-child(6) {
+		 	border: 1px solid #37415C;
+		 	padding: 15px 30px;
+		 	border-radius: 12px;
+		 }
+		}
+	}
+
+	#{&}-menu.active {
+		visibility: visible;
+		top: 0;
 	}
 
 	#{&}-button-desktop {
@@ -52,9 +79,20 @@ $bg-section: #F8FCFA;
 
 		#{&}-menu {
 			@include m.flex-box(center, center, row);
+			position: inherit;
+			z-index: inherit;
+			top: inherit;
+			left: inherit;
+			right: inherit;
+			bottom: inherit;
+			width: inherit;
+			height: inherit;
+			visibility: inherit;
+			background-color: inherit;
 
 			a {
 				margin: 0 15px;
+				cursor: pointer;
 				color: #37415C;
 				&:nth-child(5),
 				&:nth-child(6) {
@@ -70,6 +108,13 @@ $bg-section: #F8FCFA;
 			a {
 				margin: 0 20px;
 				color: white;
+				cursor: pointer;
+			}
+
+			.bd-sign-up {
+				padding: 15px 30px;
+				border: 1px solid white;
+				border-radius: 12px;
 			}
 		}
 	}
@@ -78,6 +123,7 @@ $bg-section: #F8FCFA;
 		padding: 30px 60px;
 
 		#{&}-menu {
+
 			a {
 				margin: 0 30px;
 			}
@@ -97,7 +143,16 @@ $bg-section: #F8FCFA;
 	@media (min-width: 968px) {
 		.bd-active {
 			color: black;
+			
+		}
+
+		.bd-sign-up {
+			border: 1px solid #37415C;
 		}
 	}
+}
+
+.nav.hide {
+   top: -200px !important;
 }
 
