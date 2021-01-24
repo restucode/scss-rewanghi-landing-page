@@ -19,6 +19,9 @@ $text-grey: #F8FCFA;
 	max-width: 1440px;
 	position: relative;
 
+	.bg-effect-donation {
+		display: none;
+	}
 	#{&}-area {
 	  @include m.grid(12, 20px);
 	  place-items:center;
@@ -61,7 +64,7 @@ $text-grey: #F8FCFA;
 		height: auto;
 		background-color: white;
 		padding: 0 15px 15px;
-		box-shadow: -40px 80px 70px rgba(96,96,96, .05);
+		box-shadow: -20px 80px 40px rgba(96,96,96, .02);
 		.donation-img {
 			padding: 15px 0;
 			width: 100%;
@@ -98,12 +101,16 @@ $text-grey: #F8FCFA;
 		  font-size: 1.3rem;
 		  line-height: 30px;
 		  margin: 15px 0;
+		  a {
+		  	color: black;
+		  }
 		}
 
 		p {
 		 font-size: .95rem;
 		 line-height: 25px;
 		 margin: 15px 0;
+		 color: #7B7D82;
 		}
 
 		.donation-bar {
@@ -200,5 +207,24 @@ $text-grey: #F8FCFA;
 	 	grid-column: span 4;
 	 	width: 350px;
 	 }
+	}
+
+	@media (min-width: 968px) {
+		height: 650px;
+		padding: 20px 0;
+		.bg-effect-donation {
+			background-color: #F8FCFA;
+			display: block;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			width: 100%;
+			height: 400px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 	}
 }

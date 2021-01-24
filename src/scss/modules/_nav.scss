@@ -53,7 +53,6 @@ $bg-section: #F8FCFA;
 		  width: 300px;
 		  height: 100vh;
 		  position: relative;
-		  box-shadow: 0 5px 5px rgba(0,0,0,.1);
 			a {
 			 color: black;
 			 &:nth-child(6) {
@@ -114,8 +113,8 @@ $bg-section: #F8FCFA;
 				margin: 0 25px;
 				cursor: pointer;
 				color: #37415C;
-				&:nth-child(5),
-				&:nth-child(6) {
+				&:nth-child(6),
+				&:nth-child(7) {
 					display: none;
 				}
 

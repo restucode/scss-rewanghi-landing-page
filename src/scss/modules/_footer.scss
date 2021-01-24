@@ -1,10 +1,153 @@
+@use 'mixin' as m;
+
 //fonts
 $raleway : 'Raleway', sans-serif;
 $lora : 'Lora', sans-serif;
+$inter: 'Inter', sans-serif;
 
 // color
 $bg-color: #FFFFFF;
-$secodary: #5AACA8;
+$secondary: #5AACA8;
 $third: #FF7468;
 $bg-section: #F8FCFA;
-	
+$text-grey: #F8FCFA;
+
+
+.footer {
+	padding: 20px 20px;
+	margin: 50px auto 0;
+	max-width: 1440px;
+
+	#{&}-area {
+		@include m.grid(12, 20px);
+	 	@media (min-width: 968px) {
+	 	  place-items:center;
+	 	}
+	}
+
+	#{&}-footage {
+		grid-column: span 12;
+	 	@include m.grid(12, 20px);
+	 	border-bottom: 1px solid rgba(0,0,0,.1);
+	 	padding-bottom: 30px;
+	 	// place-items: center;
+
+
+	 	@media (min-width: 768px) {
+	 		place-items: center;
+	 	}
+	 	@media (min-width: 968px) {
+	 	  place-items:center;
+	 	  padding-left: 30px;
+	 	  padding-bottom: 0;
+	 	}	 	
+
+	 	@media (min-width: 1200px) {
+	 	  padding-left: 60px;
+	 	}
+	}
+
+	#{&}-brand {
+		grid-column: span 12;
+		margin: 10px 0;
+		// background-color: red;
+		img {
+			margin: 10px 0;
+		}
+
+		p {
+			padding: 20px 0 30px;
+			color: #7B7D82;
+			width: 280px;
+		}
+
+		.footer-social {
+		   a {
+		   	margin: 0 15px 0 0;
+		   	width: 50px;
+		   	height: 50px;
+		   }
+		}
+	  @media (min-width: 768px) {
+	  	grid-column: span 6;
+	  	width: 280px;
+	  	height: 250px;
+	  }	  
+
+	  @media (min-width: 968px) {
+	  	grid-column: span 3;
+	  	height: 310px;
+	  	width: auto;
+	  }
+	}
+
+	#{&}-menu {
+		grid-column: span 12;
+		margin: 10px 0;
+
+		h4 {
+		  font-size: 1.3rem;
+		  font-weight: bold;
+		  position: relative;
+		  margin-bottom: 30px;
+
+		  &:before {
+		  	content: '';
+		  	width: 25px;
+		  	height: 25px;
+		  	position: absolute;
+		  	background-color: $secondary;
+		  	z-index: -1;
+		  	left: -9px;
+		  	top: 10px;
+		  }
+		}
+		.list-menu {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			flex-direction: column;
+
+			a {
+			  color: #7B7D82;
+			  margin: 10px 0;
+			}
+		}
+
+	  @media (min-width: 768px) {
+	  	grid-column: span 6;
+	  	width: 280px;
+	  	height: 250px;
+	  }	  
+
+	  @media (min-width: 968px) {
+	  	grid-column: span 3;
+	  	height: 290px;
+	  	width: auto;
+	  }
+	}
+
+	#{&}-copyright {
+		grid-column: span 12;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		margin-top: 30px;
+
+		span {
+			margin: 10px 0;
+			color: #7B7D82;
+			// font-family: $lora;
+
+			&:nth-child(2) {
+				margin-top: 30px;
+			}
+
+		  a {
+		  	color: #7B7D82;
+		  }
+		}
+	}
+}
