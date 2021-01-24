@@ -5,7 +5,7 @@ $lora : 'Lora', sans-serif;
 
 // color
 $bg-color: #FFFFFF;
-$secodary: #5AACA8;
+$secondary: #5AACA8;
 $third: #FF7468;
 $bg-section: #F8FCFA;
 
@@ -33,9 +33,8 @@ body {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	margin: 0 auto;
   font-family: $raleway;
-  overflow: auto;
+  overflow-x: hidden;
   background-color: white;
 
   @media (min-width: 968px) {
@@ -49,4 +48,71 @@ body.active {
   @media (min-width: 968px) {
     overflow-y: scroll;
   }
+}
+
+.to-top {
+  background: $secondary;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  z-index: 4;
+  cursor: pointer;
+}
+
+.to-top.active {
+ bottom: 32px;
+ pointer-events: auto;
+ opacity: 1;
+}
+
+.to-top svg {
+  color: white;
+  width: 30px;
+
+}
+
+
+.from-left {
+  -webkit-transform: translateX(-100px);
+  transform: translateX(-100px);
+}
+
+.from-right {
+  -webkit-transform: translateX(100px);
+  transform: translateX(100px);
+}
+
+.from-left,
+.from-right {
+  transition: opacity 300ms ease-in, -webkit-transform 600ms ease-in;
+  transition: opacity 300ms ease-in, transform 600ms ease-in;
+  transition: opacity 300ms ease-in, transform 600ms ease-in,
+    -webkit-transform 600ms ease-in;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.from-left.appear,
+.from-right.appear {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
 }

@@ -22,10 +22,10 @@
 			<div class="nav-menu">
 				<div class="nav-menu-area">
 					<svg class="nav-menu-close" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-					<a link="">Donation</a>
-					<a link="">Features</a>
-					<a link="">Volunteer</a>
-					<a link="">About Us</a>
+					<a link="donation" class="click-menu-scroll">Donation</a>
+					<a link="features" class="click-menu-scroll">Features</a>
+					<a link="volunteer" class="click-menu-scroll">Volunteer</a>
+					<a link="about-us" class="click-menu-scroll">About Us</a>
 					<a href="#">Login</a>
 					<a href="#">Sign Up</a>
 				</div>
@@ -45,7 +45,7 @@
 			<img src="./assets/hands-hero.png" alt="hands hero">
 		</div>
 		<div class="hero-area">
-			<div class="hero-left">
+			<div class="hero-left slide-in from-left">
 				<h1>Make Someone's <span class="c-secondary">Life</span> by <span class="c-third">giving</span> of yours</h1>
 				<p>Rewanghi is a digital platform for collecting donations to be distributed to people in need. We build strength, stability, and self relience through shelter</p>
 				<div class="hero-left-button">
@@ -58,7 +58,7 @@
 				<img src="./assets/hands.png" class="hero-left-hands" alt="">
 			</div>
 			<div class="hero-right">
-				<img src="./assets/hero-img.png" alt="hero-img">
+				<img src="./assets/hero-img.png" class=" slide-in from-right" alt="hero-img">
 			</div>
 		</div>
 	</div>
@@ -87,7 +87,7 @@
 		</div>
 	</div>
 
-	<div class="about-us">
+	<div class="about-us" id="about-us">
 		<div class="about-us-area">
 			<div class="about-us-header">
 				<span>About Us</span>
@@ -117,15 +117,15 @@
 		</div>
 	</div>
 
-	<div class="features">
+	<div class="features" id="features">
 		<div class="features-area">
-			<div class="features-left">
+			<div class="features-left slide-in from-left">
 				<span>Categories</span>
 				<h2>Connects nonprofits, donors, & companies in <strong>Every Country</strong></h2>
 				<p>We help local nonprofits access the funding, tools, training, and support they need to become more.</p>
 				<a href="#">Donate Now</a>
 			</div>
-			<div class="features-right">
+			<div class="features-right slide-in from-right">
 				<div class="features-menu">
 					<div class="features-card">
 						<img src="./assets/health-food.svg" alt="health food">
@@ -152,7 +152,7 @@
 		</div>
 	</div>
 
-	<div class="donation">
+	<div class="donation" id="donation">
 		<div class="bg-effect-donation">
 			<img src="./assets/bg-donate-hand.png" alt="bg donation img">
 		</div>
@@ -280,13 +280,13 @@
 		</div>
 	</div>
 
-	<div class="volunteer">
+	<div class="volunteer" id="volunteer">
 		<div class="volunteer-area">
 			<div class="bg-volunteer-area"></div>
 			<div class="volunteer-left">
-				<img src="./assets/volunteer-img.png" alt="volunteer img">
+				<img src="./assets/volunteer-img.png" class="slide-in from-left" alt="volunteer img">
 			</div>
-			<div class="volunteer-right">
+			<div class="volunteer-right slide-in from-right">
 				<span>volunteer</span>
 				<h2>Helping Today. Helping Tommorow <strong>Charity</strong></h2>
 				<p>Join our community to become a volunteer and you can devote your life to helping others</p>
@@ -355,5 +355,8 @@
 		</div>
 	</footer>
 
+    <a class="to-top">
+		<svg class="" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+	</a>
 </body>
 </html>
