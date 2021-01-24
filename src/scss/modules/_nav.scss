@@ -55,6 +55,7 @@ $bg-section: #F8FCFA;
 		  position: relative;
 			a {
 			 color: black;
+			 cursor: pointer;
 			 &:nth-child(6) {
 			 	border: 1px solid #37415C;
 			 	padding: 15px 30px;
@@ -113,6 +114,7 @@ $bg-section: #F8FCFA;
 				margin: 0 25px;
 				cursor: pointer;
 				color: #37415C;
+				cursor: pointer;
 				&:nth-child(6),
 				&:nth-child(7) {
 					display: none;

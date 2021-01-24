@@ -52,6 +52,7 @@ clickMenuScroll.forEach(link => {
   let el = document.getElementById(e.target.getAttribute("link"))
   el.scrollIntoView({behavior: 'smooth', block:'start'})
   menu.classList.remove('active')
+  document.body.classList.remove('active')
  })
 })
 
