@@ -26,35 +26,3 @@
 	text-shadow: 0 4px 4px rgba(0,0,0,.25);
 }
 
-// @mixin fade-in() {
-//    opacity: 0;
-//   transition: opacity 250ms ease-in;
-// }
-
-
-// @mixin from-left() {
-//   -webkit-transform: translateX(-50%);
-//   transform: translateX(-50%);
-//   transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
-//   transition: opacity 250ms ease-in, transform 400ms ease-in;
-//   transition: opacity 250ms ease-in, transform 400ms ease-in,
-//   -webkit-transform 400ms ease-in;
-//   opacity: 0;
-// }
-
-
-// @mixin from-right() {
-//   -webkit-transform: translateX(50%);
-//   transform: translateX(50%);
-//   transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
-//   transition: opacity 250ms ease-in, transform 400ms ease-in;
-//   transition: opacity 250ms ease-in, transform 400ms ease-in,
-//   -webkit-transform 400ms ease-in;
-//   opacity: 0;
-// }
-
-// @mixin appearX() {
-//   -webkit-transform: translateX(0);
-//   transform: translateX(0);
-//   opacity: 1;
-// }

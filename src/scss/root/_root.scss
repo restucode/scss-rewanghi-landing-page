@@ -87,32 +87,3 @@ body.active {
   width: 30px;
 
 }
-
-
-.from-left {
-  -webkit-transform: translateX(-100px);
-  transform: translateX(-100px);
-}
-
-.from-right {
-  -webkit-transform: translateX(100px);
-  transform: translateX(100px);
-}
-
-.from-left,
-.from-right {
-  transition: opacity 300ms ease-in, -webkit-transform 600ms ease-in;
-  transition: opacity 300ms ease-in, transform 600ms ease-in;
-  transition: opacity 300ms ease-in, transform 600ms ease-in,
-    -webkit-transform 600ms ease-in;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.from-left.appear,
-.from-right.appear {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
-  opacity: 1;
-  visibility: visible;
-}
