@@ -36,8 +36,17 @@ body {
 	margin: 0 auto;
   font-family: $raleway;
   overflow: auto;
+  background-color: white;
+
+  @media (min-width: 968px) {
+    overflow-y : scroll;
+  }
 }
 
 body.active {
   overflow: hidden;
+
+  @media (min-width: 968px) {
+    overflow-y: scroll;
+  }
 }

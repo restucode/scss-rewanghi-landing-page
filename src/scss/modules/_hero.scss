@@ -16,6 +16,10 @@ $third: #FF7468;
 	padding: 40px 0 20px;
 	position: relative;
 	background-color: $bg-section;
+
+	.bg-effect-img {
+		display: none;
+	}
 	.hero-area {
 		@include m.grid(12, 20px);
 		// padding: 0 20px;
@@ -116,12 +120,18 @@ $third: #FF7468;
 	 position: relative;
 	 margin: 0 auto;
 	 max-width: 1440px;
-	 .bg-blok {
+	 .bg-effect-img {
 	 	position: absolute;
 	 	right: 0;
 	 	height: 100%;
 	 	width: 26%;
+	 	display: block;
 	 	background-color: $secondary;
+	 	img {
+	 		width: 100%;
+	 		height: 100%;
+	 		object-fit: contain;
+	 	}
 	 }
 
 
